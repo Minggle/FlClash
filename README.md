@@ -17,6 +17,8 @@ A multi-platform proxy client based on ClashMeta. Simple to use, open source and
 
 </div>
 
+> **Minggle fork — subscription ports (Windows x64):** assign different subscriptions to different local proxy ports. See the [release guide](RELEASE_PORTS.md), [development notes](PORT_ROUTING.md), and [downloads](https://github.com/Minggle/FlClash/releases). The upstream project information follows below.
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="snapshots/preview-dark.png">

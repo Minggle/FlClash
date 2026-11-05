@@ -17,6 +17,8 @@
 
 </div>
 
+> **Minggle 二开版：多订阅独立端口（Windows x64）**。为不同应用分配不同订阅和本地代理端口。查看 [发布使用说明](RELEASE_PORTS.md)、[开发维护说明](PORT_ROUTING.md) 和 [下载页面](https://github.com/Minggle/FlClash/releases)。下方保留上游项目介绍。
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="snapshots/preview-dark.png">
