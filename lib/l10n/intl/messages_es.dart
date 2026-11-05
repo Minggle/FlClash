@@ -1125,9 +1125,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "installCertificateSuccess": MessageLookupByLibrary.simpleMessage(
       "Certificado instalado",
     ),
-    "installedAppsPermissionDeniedMessage": MessageLookupByLibrary.simpleMessage(
-      "Se denegó el permiso de lista de apps, por lo que no se pueden mostrar las apps instaladas. Concédelo manualmente en los ajustes del sistema.",
-    ),
+    "installedAppsPermissionDeniedMessage":
+        MessageLookupByLibrary.simpleMessage(
+          "Se denegó el permiso de lista de apps, por lo que no se pueden mostrar las apps instaladas. Concédelo manualmente en los ajustes del sistema.",
+        ),
     "installedAppsPermissionDesc": MessageLookupByLibrary.simpleMessage(
       "Este sistema oculta la lista de apps instaladas hasta que se concede el permiso. Autorízalo para configurar el proxy por app.",
     ),
@@ -1645,6 +1646,90 @@ class MessageLookup extends MessageLookupByLibrary {
       "Introduce un puerto diferente",
     ),
     "portHopping": MessageLookupByLibrary.simpleMessage("Salto de puertos"),
+    "portRoutingBlocked": MessageLookupByLibrary.simpleMessage(
+      "Sin nodos coincidentes · conexiones rechazadas",
+    ),
+    "portRoutingCheck": MessageLookupByLibrary.simpleMessage(
+      "Comprobar puertos",
+    ),
+    "portRoutingChecking": MessageLookupByLibrary.simpleMessage("Comprobando"),
+    "portRoutingCopyHint": MessageLookupByLibrary.simpleMessage(
+      "Haz clic derecho para copiar la dirección HTTP/SOCKS5, actualizar la suscripción o cambiar el intervalo.",
+    ),
+    "portRoutingCoreUnavailable": MessageLookupByLibrary.simpleMessage(
+      "El núcleo o el puerto proxy no está disponible.",
+    ),
+    "portRoutingDescription": MessageLookupByLibrary.simpleMessage(
+      "Cada puerto local utiliza su propia suscripción. El proxy del sistema y TUN permanecen desactivados en este modo.",
+    ),
+    "portRoutingDuplicateNode": MessageLookupByLibrary.simpleMessage(
+      "Hay nombres de nodo duplicados.",
+    ),
+    "portRoutingEmpty": MessageLookupByLibrary.simpleMessage(
+      "Importa una suscripción y añade un puerto.",
+    ),
+    "portRoutingEmptySource": MessageLookupByLibrary.simpleMessage(
+      "La suscripción no contiene nodos proxy.",
+    ),
+    "portRoutingFixed": MessageLookupByLibrary.simpleMessage("Nodo fijo"),
+    "portRoutingInvalidBinding": MessageLookupByLibrary.simpleMessage(
+      "Indica nombre, suscripción y selección de nodo.",
+    ),
+    "portRoutingInvalidPort": MessageLookupByLibrary.simpleMessage(
+      "Introduce un puerto de 1024 a 65535.",
+    ),
+    "portRoutingListening": MessageLookupByLibrary.simpleMessage(
+      "Escuchando · salida sin verificar",
+    ),
+    "portRoutingMatches": MessageLookupByLibrary.simpleMessage(
+      "Nodos coincidentes",
+    ),
+    "portRoutingMinutes": MessageLookupByLibrary.simpleMessage(
+      "Intervalo (minutos)",
+    ),
+    "portRoutingMissingSource": MessageLookupByLibrary.simpleMessage(
+      "Primero importa o selecciona una suscripción.",
+    ),
+    "portRoutingMode": MessageLookupByLibrary.simpleMessage(
+      "Modo de puertos dedicados",
+    ),
+    "portRoutingRefreshRange": MessageLookupByLibrary.simpleMessage(
+      "Introduce un intervalo de 1 a 1440 minutos.",
+    ),
+    "portRoutingRefreshSettings": MessageLookupByLibrary.simpleMessage(
+      "Actualización de suscripción",
+    ),
+    "portRoutingRegion": MessageLookupByLibrary.simpleMessage(
+      "Automático por región",
+    ),
+    "portRoutingRegionHint": MessageLookupByLibrary.simpleMessage(
+      "Separa las palabras clave de los nombres con |, por ejemplo ES|España. La selección usa latencia, no ancho de banda.",
+    ),
+    "portRoutingSafeMode": MessageLookupByLibrary.simpleMessage(
+      "Modo seguro: puedes editar la configuración, pero no se abren puertos proxy.",
+    ),
+    "portRoutingSourceInUse": MessageLookupByLibrary.simpleMessage(
+      "Elimina los puertos asociados antes de borrar la suscripción. La configuración dedicada se gestiona aquí.",
+    ),
+    "portRoutingStaleUpdate": MessageLookupByLibrary.simpleMessage(
+      "La configuración cambió durante la actualización. Inténtalo de nuevo.",
+    ),
+    "portRoutingStopped": MessageLookupByLibrary.simpleMessage("Detenido"),
+    "portRoutingStrategy": MessageLookupByLibrary.simpleMessage(
+      "Selección de nodo",
+    ),
+    "portRoutingTitle": MessageLookupByLibrary.simpleMessage(
+      "Puertos de suscripciones",
+    ),
+    "portRoutingUnchecked": MessageLookupByLibrary.simpleMessage(
+      "Sin comprobar",
+    ),
+    "portRoutingUnsupported": MessageLookupByLibrary.simpleMessage(
+      "Usa una suscripción con nodos proxy independientes. No se admiten proveedores anidados, nodos directos ni cadenas.",
+    ),
+    "portRoutingUpdateFailed": MessageLookupByLibrary.simpleMessage(
+      "Error al actualizar. Se conservan los últimos nodos válidos.",
+    ),
     "portTip": m75,
     "portValue": m76,
     "ports": MessageLookupByLibrary.simpleMessage("Puertos"),

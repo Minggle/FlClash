@@ -7,6 +7,7 @@ import 'clash_config.dart';
 import 'common.dart';
 import 'core.dart';
 import 'profile.dart';
+import 'port_routing.dart';
 
 part 'generated/state.freezed.dart';
 part 'generated/state.g.dart';
@@ -247,6 +248,7 @@ abstract class MigrationData with _$MigrationData {
 @freezed
 abstract class SetupState with _$SetupState {
   const factory SetupState({
+    @Default(PortRoutingConfig()) PortRoutingConfig portRouting,
     required int? profileId,
     required int? profileLastUpdateDate,
     required ProfileType profileType,

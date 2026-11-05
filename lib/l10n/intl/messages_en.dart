@@ -1048,9 +1048,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "installCertificateSuccess": MessageLookupByLibrary.simpleMessage(
       "Certificate installed",
     ),
-    "installedAppsPermissionDeniedMessage": MessageLookupByLibrary.simpleMessage(
-      "The app list permission was denied, so installed apps cannot be listed. Please grant it manually in system settings.",
-    ),
+    "installedAppsPermissionDeniedMessage":
+        MessageLookupByLibrary.simpleMessage(
+          "The app list permission was denied, so installed apps cannot be listed. Please grant it manually in system settings.",
+        ),
     "installedAppsPermissionDesc": MessageLookupByLibrary.simpleMessage(
       "This system hides the installed app list until the permission is granted. Authorize it to configure the per-app proxy.",
     ),
@@ -1528,6 +1529,86 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please enter a different port",
     ),
     "portHopping": MessageLookupByLibrary.simpleMessage("Port hopping"),
+    "portRoutingBlocked": MessageLookupByLibrary.simpleMessage(
+      "No matching node · connections rejected",
+    ),
+    "portRoutingCheck": MessageLookupByLibrary.simpleMessage("Check ports"),
+    "portRoutingChecking": MessageLookupByLibrary.simpleMessage("Checking"),
+    "portRoutingCopyHint": MessageLookupByLibrary.simpleMessage(
+      "Right-click a binding to copy its HTTP/SOCKS5 address, update its subscription or change the refresh interval.",
+    ),
+    "portRoutingCoreUnavailable": MessageLookupByLibrary.simpleMessage(
+      "The core or proxy listener is unavailable.",
+    ),
+    "portRoutingDescription": MessageLookupByLibrary.simpleMessage(
+      "Each local port uses its own subscription. System proxy and TUN stay off in this mode.",
+    ),
+    "portRoutingDuplicateNode": MessageLookupByLibrary.simpleMessage(
+      "The subscription contains duplicate node names.",
+    ),
+    "portRoutingEmpty": MessageLookupByLibrary.simpleMessage(
+      "Import a subscription, then add a port binding.",
+    ),
+    "portRoutingEmptySource": MessageLookupByLibrary.simpleMessage(
+      "The subscription contains no proxy nodes.",
+    ),
+    "portRoutingFixed": MessageLookupByLibrary.simpleMessage("Fixed node"),
+    "portRoutingInvalidBinding": MessageLookupByLibrary.simpleMessage(
+      "Enter a name, subscription and node selection.",
+    ),
+    "portRoutingInvalidPort": MessageLookupByLibrary.simpleMessage(
+      "Enter a port from 1024 to 65535.",
+    ),
+    "portRoutingListening": MessageLookupByLibrary.simpleMessage(
+      "Listening · outbound not verified",
+    ),
+    "portRoutingMatches": MessageLookupByLibrary.simpleMessage(
+      "Matching nodes",
+    ),
+    "portRoutingMinutes": MessageLookupByLibrary.simpleMessage(
+      "Interval (minutes)",
+    ),
+    "portRoutingMissingSource": MessageLookupByLibrary.simpleMessage(
+      "Import or select an existing subscription first.",
+    ),
+    "portRoutingMode": MessageLookupByLibrary.simpleMessage(
+      "Dedicated port mode",
+    ),
+    "portRoutingRefreshRange": MessageLookupByLibrary.simpleMessage(
+      "Enter an interval from 1 to 1440 minutes.",
+    ),
+    "portRoutingRefreshSettings": MessageLookupByLibrary.simpleMessage(
+      "Subscription refresh",
+    ),
+    "portRoutingRegion": MessageLookupByLibrary.simpleMessage(
+      "Automatic by region",
+    ),
+    "portRoutingRegionHint": MessageLookupByLibrary.simpleMessage(
+      "Match node names using keywords separated by |, for example HK|Hong Kong. Automatic selection uses latency, not bandwidth.",
+    ),
+    "portRoutingSafeMode": MessageLookupByLibrary.simpleMessage(
+      "Safe mode: configuration can be edited, but no proxy ports are opened.",
+    ),
+    "portRoutingSourceInUse": MessageLookupByLibrary.simpleMessage(
+      "Remove the port bindings before deleting this subscription. The dedicated configuration is managed by Subscription ports.",
+    ),
+    "portRoutingStaleUpdate": MessageLookupByLibrary.simpleMessage(
+      "The configuration changed during the update. Please try again.",
+    ),
+    "portRoutingStopped": MessageLookupByLibrary.simpleMessage("Stopped"),
+    "portRoutingStrategy": MessageLookupByLibrary.simpleMessage(
+      "Node selection",
+    ),
+    "portRoutingTitle": MessageLookupByLibrary.simpleMessage(
+      "Subscription ports",
+    ),
+    "portRoutingUnchecked": MessageLookupByLibrary.simpleMessage("Not checked"),
+    "portRoutingUnsupported": MessageLookupByLibrary.simpleMessage(
+      "Use a subscription containing independent proxy nodes. Nested providers, direct nodes and proxy chains are not supported.",
+    ),
+    "portRoutingUpdateFailed": MessageLookupByLibrary.simpleMessage(
+      "Update failed. The last working nodes are retained.",
+    ),
     "portTip": m75,
     "portValue": m76,
     "ports": MessageLookupByLibrary.simpleMessage("Ports"),

@@ -1306,6 +1306,70 @@ class MessageLookup extends MessageLookupByLibrary {
     "port": MessageLookupByLibrary.simpleMessage("ポート"),
     "portConflictTip": MessageLookupByLibrary.simpleMessage("別のポートを入力してください"),
     "portHopping": MessageLookupByLibrary.simpleMessage("ポートホッピング"),
+    "portRoutingBlocked": MessageLookupByLibrary.simpleMessage(
+      "一致するノードなし・接続を拒否",
+    ),
+    "portRoutingCheck": MessageLookupByLibrary.simpleMessage("ポートを確認"),
+    "portRoutingChecking": MessageLookupByLibrary.simpleMessage("確認中"),
+    "portRoutingCopyHint": MessageLookupByLibrary.simpleMessage(
+      "右クリックで HTTP/SOCKS5 アドレスのコピー、更新、更新間隔の設定ができます。",
+    ),
+    "portRoutingCoreUnavailable": MessageLookupByLibrary.simpleMessage(
+      "コアまたはプロキシポートを利用できません。",
+    ),
+    "portRoutingDescription": MessageLookupByLibrary.simpleMessage(
+      "各ローカルポートは独立したサブスクリプションを使用します。このモードではシステムプロキシと TUN は無効です。",
+    ),
+    "portRoutingDuplicateNode": MessageLookupByLibrary.simpleMessage(
+      "ノード名が重複しています。",
+    ),
+    "portRoutingEmpty": MessageLookupByLibrary.simpleMessage(
+      "サブスクリプションを読み込み、ポートを追加してください。",
+    ),
+    "portRoutingEmptySource": MessageLookupByLibrary.simpleMessage(
+      "プロキシノードがありません。",
+    ),
+    "portRoutingFixed": MessageLookupByLibrary.simpleMessage("固定ノード"),
+    "portRoutingInvalidBinding": MessageLookupByLibrary.simpleMessage(
+      "名前、サブスクリプション、ノード選択を入力してください。",
+    ),
+    "portRoutingInvalidPort": MessageLookupByLibrary.simpleMessage(
+      "1024～65535 のポートを入力してください。",
+    ),
+    "portRoutingListening": MessageLookupByLibrary.simpleMessage("待ち受け中・出口未確認"),
+    "portRoutingMatches": MessageLookupByLibrary.simpleMessage("一致するノード"),
+    "portRoutingMinutes": MessageLookupByLibrary.simpleMessage("間隔（分）"),
+    "portRoutingMissingSource": MessageLookupByLibrary.simpleMessage(
+      "先にサブスクリプションを読み込むか選択してください。",
+    ),
+    "portRoutingMode": MessageLookupByLibrary.simpleMessage("専用ポートモード"),
+    "portRoutingRefreshRange": MessageLookupByLibrary.simpleMessage(
+      "1～1440 分を入力してください。",
+    ),
+    "portRoutingRefreshSettings": MessageLookupByLibrary.simpleMessage("更新設定"),
+    "portRoutingRegion": MessageLookupByLibrary.simpleMessage("地域で自動選択"),
+    "portRoutingRegionHint": MessageLookupByLibrary.simpleMessage(
+      "ノード名のキーワードを | で区切ります（例：JP|日本）。自動選択は帯域幅ではなく遅延を使用します。",
+    ),
+    "portRoutingSafeMode": MessageLookupByLibrary.simpleMessage(
+      "セーフモードでは設定を編集できますが、プロキシポートは開きません。",
+    ),
+    "portRoutingSourceInUse": MessageLookupByLibrary.simpleMessage(
+      "削除前に関連ポートを解除してください。専用設定はこの画面で管理します。",
+    ),
+    "portRoutingStaleUpdate": MessageLookupByLibrary.simpleMessage(
+      "更新中に設定が変更されました。再試行してください。",
+    ),
+    "portRoutingStopped": MessageLookupByLibrary.simpleMessage("停止中"),
+    "portRoutingStrategy": MessageLookupByLibrary.simpleMessage("ノード選択"),
+    "portRoutingTitle": MessageLookupByLibrary.simpleMessage("サブスクリプションポート"),
+    "portRoutingUnchecked": MessageLookupByLibrary.simpleMessage("未確認"),
+    "portRoutingUnsupported": MessageLookupByLibrary.simpleMessage(
+      "独立したプロキシノードを含むサブスクリプションを使用してください。入れ子のプロバイダー、直接接続、プロキシチェーンは非対応です。",
+    ),
+    "portRoutingUpdateFailed": MessageLookupByLibrary.simpleMessage(
+      "更新に失敗しました。最後に動作したノードを保持しています。",
+    ),
     "portTip": m75,
     "portValue": m76,
     "ports": MessageLookupByLibrary.simpleMessage("ポート"),

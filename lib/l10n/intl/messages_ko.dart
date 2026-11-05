@@ -1286,6 +1286,74 @@ class MessageLookup extends MessageLookupByLibrary {
     "port": MessageLookupByLibrary.simpleMessage("포트"),
     "portConflictTip": MessageLookupByLibrary.simpleMessage("다른 포트를 입력하세요"),
     "portHopping": MessageLookupByLibrary.simpleMessage("포트 호핑"),
+    "portRoutingBlocked": MessageLookupByLibrary.simpleMessage(
+      "일치하는 노드 없음 · 연결 거부",
+    ),
+    "portRoutingCheck": MessageLookupByLibrary.simpleMessage("포트 확인"),
+    "portRoutingChecking": MessageLookupByLibrary.simpleMessage("확인 중"),
+    "portRoutingCopyHint": MessageLookupByLibrary.simpleMessage(
+      "우클릭하여 HTTP/SOCKS5 주소를 복사하거나 구독 및 갱신 주기를 설정하세요.",
+    ),
+    "portRoutingCoreUnavailable": MessageLookupByLibrary.simpleMessage(
+      "코어 또는 프록시 포트를 사용할 수 없습니다.",
+    ),
+    "portRoutingDescription": MessageLookupByLibrary.simpleMessage(
+      "각 로컬 포트는 별도 구독을 사용합니다. 이 모드에서는 시스템 프록시와 TUN이 꺼집니다.",
+    ),
+    "portRoutingDuplicateNode": MessageLookupByLibrary.simpleMessage(
+      "노드 이름이 중복됩니다.",
+    ),
+    "portRoutingEmpty": MessageLookupByLibrary.simpleMessage(
+      "구독을 가져온 후 포트를 추가하세요.",
+    ),
+    "portRoutingEmptySource": MessageLookupByLibrary.simpleMessage(
+      "구독에 프록시 노드가 없습니다.",
+    ),
+    "portRoutingFixed": MessageLookupByLibrary.simpleMessage("고정 노드"),
+    "portRoutingInvalidBinding": MessageLookupByLibrary.simpleMessage(
+      "이름, 구독 및 노드 선택을 입력하세요.",
+    ),
+    "portRoutingInvalidPort": MessageLookupByLibrary.simpleMessage(
+      "1024~65535 포트를 입력하세요.",
+    ),
+    "portRoutingListening": MessageLookupByLibrary.simpleMessage(
+      "수신 중 · 출구 미확인",
+    ),
+    "portRoutingMatches": MessageLookupByLibrary.simpleMessage("일치하는 노드"),
+    "portRoutingMinutes": MessageLookupByLibrary.simpleMessage("주기(분)"),
+    "portRoutingMissingSource": MessageLookupByLibrary.simpleMessage(
+      "먼저 구독을 가져오거나 선택하세요.",
+    ),
+    "portRoutingMode": MessageLookupByLibrary.simpleMessage("전용 다중 포트 모드"),
+    "portRoutingRefreshRange": MessageLookupByLibrary.simpleMessage(
+      "1~1440분을 입력하세요.",
+    ),
+    "portRoutingRefreshSettings": MessageLookupByLibrary.simpleMessage(
+      "구독 갱신 설정",
+    ),
+    "portRoutingRegion": MessageLookupByLibrary.simpleMessage("지역별 자동 선택"),
+    "portRoutingRegionHint": MessageLookupByLibrary.simpleMessage(
+      "노드 이름의 키워드를 |로 구분하세요. 예: KR|한국. 자동 선택은 대역폭이 아닌 지연 시간을 기준으로 합니다.",
+    ),
+    "portRoutingSafeMode": MessageLookupByLibrary.simpleMessage(
+      "안전 모드: 설정은 편집할 수 있지만 프록시 포트는 열리지 않습니다.",
+    ),
+    "portRoutingSourceInUse": MessageLookupByLibrary.simpleMessage(
+      "구독을 삭제하기 전에 연결된 포트를 제거하세요. 전용 설정은 이 화면에서 관리됩니다.",
+    ),
+    "portRoutingStaleUpdate": MessageLookupByLibrary.simpleMessage(
+      "갱신 중 설정이 변경되었습니다. 다시 시도하세요.",
+    ),
+    "portRoutingStopped": MessageLookupByLibrary.simpleMessage("중지됨"),
+    "portRoutingStrategy": MessageLookupByLibrary.simpleMessage("노드 선택"),
+    "portRoutingTitle": MessageLookupByLibrary.simpleMessage("구독별 포트"),
+    "portRoutingUnchecked": MessageLookupByLibrary.simpleMessage("미확인"),
+    "portRoutingUnsupported": MessageLookupByLibrary.simpleMessage(
+      "독립 프록시 노드가 있는 구독을 사용하세요. 중첩 제공자, 직접 연결 노드 및 프록시 체인은 지원하지 않습니다.",
+    ),
+    "portRoutingUpdateFailed": MessageLookupByLibrary.simpleMessage(
+      "갱신 실패. 마지막으로 정상 작동한 노드를 유지합니다.",
+    ),
     "portTip": m75,
     "portValue": m76,
     "ports": MessageLookupByLibrary.simpleMessage("포트"),

@@ -1182,6 +1182,68 @@ class MessageLookup extends MessageLookupByLibrary {
     "port": MessageLookupByLibrary.simpleMessage("端口"),
     "portConflictTip": MessageLookupByLibrary.simpleMessage("请输入不同的端口"),
     "portHopping": MessageLookupByLibrary.simpleMessage("端口跳跃"),
+    "portRoutingBlocked": MessageLookupByLibrary.simpleMessage("无匹配节点 · 已拒绝连接"),
+    "portRoutingCheck": MessageLookupByLibrary.simpleMessage("检查端口"),
+    "portRoutingChecking": MessageLookupByLibrary.simpleMessage("检查中"),
+    "portRoutingCopyHint": MessageLookupByLibrary.simpleMessage(
+      "右键点击绑定可复制 HTTP/SOCKS5 地址、更新订阅或设置更新周期。",
+    ),
+    "portRoutingCoreUnavailable": MessageLookupByLibrary.simpleMessage(
+      "核心或代理监听端口不可用。",
+    ),
+    "portRoutingDescription": MessageLookupByLibrary.simpleMessage(
+      "每个本地端口使用独立订阅；此模式下系统代理和 TUN 保持关闭。",
+    ),
+    "portRoutingDuplicateNode": MessageLookupByLibrary.simpleMessage(
+      "订阅中存在重复节点名。",
+    ),
+    "portRoutingEmpty": MessageLookupByLibrary.simpleMessage("先导入订阅，再添加端口绑定。"),
+    "portRoutingEmptySource": MessageLookupByLibrary.simpleMessage("订阅没有代理节点。"),
+    "portRoutingFixed": MessageLookupByLibrary.simpleMessage("固定节点"),
+    "portRoutingInvalidBinding": MessageLookupByLibrary.simpleMessage(
+      "请填写名称、订阅和节点选择策略。",
+    ),
+    "portRoutingInvalidPort": MessageLookupByLibrary.simpleMessage(
+      "请输入 1024 至 65535 的端口。",
+    ),
+    "portRoutingListening": MessageLookupByLibrary.simpleMessage(
+      "已监听 · 出口尚未验证",
+    ),
+    "portRoutingMatches": MessageLookupByLibrary.simpleMessage("匹配节点"),
+    "portRoutingMinutes": MessageLookupByLibrary.simpleMessage("更新间隔（分钟）"),
+    "portRoutingMissingSource": MessageLookupByLibrary.simpleMessage(
+      "请先导入或选择已有订阅。",
+    ),
+    "portRoutingMode": MessageLookupByLibrary.simpleMessage("专用多端口模式"),
+    "portRoutingRefreshRange": MessageLookupByLibrary.simpleMessage(
+      "请输入 1 至 1440 分钟。",
+    ),
+    "portRoutingRefreshSettings": MessageLookupByLibrary.simpleMessage(
+      "订阅更新设置",
+    ),
+    "portRoutingRegion": MessageLookupByLibrary.simpleMessage("按区域自动选择"),
+    "portRoutingRegionHint": MessageLookupByLibrary.simpleMessage(
+      "按节点名称匹配关键词，多个关键词用 | 分隔，例如 HK|香港。自动选择依据延迟，不代表实际带宽。",
+    ),
+    "portRoutingSafeMode": MessageLookupByLibrary.simpleMessage(
+      "安全模式：可以编辑配置，但不会开放代理端口。",
+    ),
+    "portRoutingSourceInUse": MessageLookupByLibrary.simpleMessage(
+      "请先移除相关端口绑定再删除订阅；专用配置由“多订阅端口”管理。",
+    ),
+    "portRoutingStaleUpdate": MessageLookupByLibrary.simpleMessage(
+      "更新期间配置已变更，请重试。",
+    ),
+    "portRoutingStopped": MessageLookupByLibrary.simpleMessage("已停止"),
+    "portRoutingStrategy": MessageLookupByLibrary.simpleMessage("节点选择策略"),
+    "portRoutingTitle": MessageLookupByLibrary.simpleMessage("多订阅端口"),
+    "portRoutingUnchecked": MessageLookupByLibrary.simpleMessage("尚未检查"),
+    "portRoutingUnsupported": MessageLookupByLibrary.simpleMessage(
+      "请使用包含独立代理节点的订阅；暂不支持嵌套代理集、直连节点和代理链。",
+    ),
+    "portRoutingUpdateFailed": MessageLookupByLibrary.simpleMessage(
+      "更新失败，已保留上次可用节点。",
+    ),
     "portTip": m75,
     "portValue": m76,
     "ports": MessageLookupByLibrary.simpleMessage("端口"),

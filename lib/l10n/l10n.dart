@@ -7663,8 +7663,7 @@ class AppLocalizations {
   String customImportDroppedSubRules(num count, Object label) {
     return Intl.plural(
       count,
-      one:
-          '1 SUB-RULE rule was dropped, since custom profiles do not support sub-rules',
+      one: '1 SUB-RULE rule was dropped, since custom profiles do not support sub-rules',
       other:
           '$label SUB-RULE rules were dropped, since custom profiles do not support sub-rules',
       name: 'customImportDroppedSubRules',
@@ -9068,6 +9067,306 @@ class AppLocalizations {
     return Intl.message(
       'These domains are resolved by Fallback directly.',
       name: 'fallbackFilterDomainDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subscription ports`
+  String get portRoutingTitle {
+    return Intl.message(
+      'Subscription ports',
+      name: 'portRoutingTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dedicated port mode`
+  String get portRoutingMode {
+    return Intl.message(
+      'Dedicated port mode',
+      name: 'portRoutingMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Each local port uses its own subscription. System proxy and TUN stay off in this mode.`
+  String get portRoutingDescription {
+    return Intl.message(
+      'Each local port uses its own subscription. System proxy and TUN stay off in this mode.',
+      name: 'portRoutingDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Safe mode: configuration can be edited, but no proxy ports are opened.`
+  String get portRoutingSafeMode {
+    return Intl.message(
+      'Safe mode: configuration can be edited, but no proxy ports are opened.',
+      name: 'portRoutingSafeMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Import a subscription, then add a port binding.`
+  String get portRoutingEmpty {
+    return Intl.message(
+      'Import a subscription, then add a port binding.',
+      name: 'portRoutingEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Right-click a binding to copy its HTTP/SOCKS5 address, update its subscription or change the refresh interval.`
+  String get portRoutingCopyHint {
+    return Intl.message(
+      'Right-click a binding to copy its HTTP/SOCKS5 address, update its subscription or change the refresh interval.',
+      name: 'portRoutingCopyHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Node selection`
+  String get portRoutingStrategy {
+    return Intl.message(
+      'Node selection',
+      name: 'portRoutingStrategy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fixed node`
+  String get portRoutingFixed {
+    return Intl.message(
+      'Fixed node',
+      name: 'portRoutingFixed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Automatic by region`
+  String get portRoutingRegion {
+    return Intl.message(
+      'Automatic by region',
+      name: 'portRoutingRegion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Match node names using keywords separated by |, for example HK|Hong Kong. Automatic selection uses latency, not bandwidth.`
+  String get portRoutingRegionHint {
+    return Intl.message(
+      'Match node names using keywords separated by |, for example HK|Hong Kong. Automatic selection uses latency, not bandwidth.',
+      name: 'portRoutingRegionHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Matching nodes`
+  String get portRoutingMatches {
+    return Intl.message(
+      'Matching nodes',
+      name: 'portRoutingMatches',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subscription refresh`
+  String get portRoutingRefreshSettings {
+    return Intl.message(
+      'Subscription refresh',
+      name: 'portRoutingRefreshSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Interval (minutes)`
+  String get portRoutingMinutes {
+    return Intl.message(
+      'Interval (minutes)',
+      name: 'portRoutingMinutes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter an interval from 1 to 1440 minutes.`
+  String get portRoutingRefreshRange {
+    return Intl.message(
+      'Enter an interval from 1 to 1440 minutes.',
+      name: 'portRoutingRefreshRange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check ports`
+  String get portRoutingCheck {
+    return Intl.message(
+      'Check ports',
+      name: 'portRoutingCheck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Checking`
+  String get portRoutingChecking {
+    return Intl.message(
+      'Checking',
+      name: 'portRoutingChecking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Listening · outbound not verified`
+  String get portRoutingListening {
+    return Intl.message(
+      'Listening · outbound not verified',
+      name: 'portRoutingListening',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No matching node · connections rejected`
+  String get portRoutingBlocked {
+    return Intl.message(
+      'No matching node · connections rejected',
+      name: 'portRoutingBlocked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not checked`
+  String get portRoutingUnchecked {
+    return Intl.message(
+      'Not checked',
+      name: 'portRoutingUnchecked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stopped`
+  String get portRoutingStopped {
+    return Intl.message(
+      'Stopped',
+      name: 'portRoutingStopped',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a port from 1024 to 65535.`
+  String get portRoutingInvalidPort {
+    return Intl.message(
+      'Enter a port from 1024 to 65535.',
+      name: 'portRoutingInvalidPort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a name, subscription and node selection.`
+  String get portRoutingInvalidBinding {
+    return Intl.message(
+      'Enter a name, subscription and node selection.',
+      name: 'portRoutingInvalidBinding',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use a subscription containing independent proxy nodes. Nested providers, direct nodes and proxy chains are not supported.`
+  String get portRoutingUnsupported {
+    return Intl.message(
+      'Use a subscription containing independent proxy nodes. Nested providers, direct nodes and proxy chains are not supported.',
+      name: 'portRoutingUnsupported',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The subscription contains no proxy nodes.`
+  String get portRoutingEmptySource {
+    return Intl.message(
+      'The subscription contains no proxy nodes.',
+      name: 'portRoutingEmptySource',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The subscription contains duplicate node names.`
+  String get portRoutingDuplicateNode {
+    return Intl.message(
+      'The subscription contains duplicate node names.',
+      name: 'portRoutingDuplicateNode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Import or select an existing subscription first.`
+  String get portRoutingMissingSource {
+    return Intl.message(
+      'Import or select an existing subscription first.',
+      name: 'portRoutingMissingSource',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The core or proxy listener is unavailable.`
+  String get portRoutingCoreUnavailable {
+    return Intl.message(
+      'The core or proxy listener is unavailable.',
+      name: 'portRoutingCoreUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The configuration changed during the update. Please try again.`
+  String get portRoutingStaleUpdate {
+    return Intl.message(
+      'The configuration changed during the update. Please try again.',
+      name: 'portRoutingStaleUpdate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remove the port bindings before deleting this subscription. The dedicated configuration is managed by Subscription ports.`
+  String get portRoutingSourceInUse {
+    return Intl.message(
+      'Remove the port bindings before deleting this subscription. The dedicated configuration is managed by Subscription ports.',
+      name: 'portRoutingSourceInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update failed. The last working nodes are retained.`
+  String get portRoutingUpdateFailed {
+    return Intl.message(
+      'Update failed. The last working nodes are retained.',
+      name: 'portRoutingUpdateFailed',
       desc: '',
       args: [],
     );

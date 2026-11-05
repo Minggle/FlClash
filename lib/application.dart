@@ -78,6 +78,7 @@ class ApplicationState extends ConsumerState<Application> {
         exit(0);
       }
       _autoUpdateProfilesTask();
+      ref.read(portRoutingActionProvider.notifier).startScheduler();
       _initLink();
       if (!safeModeBuild) {
         unawaited(app?.initShortcuts());
@@ -204,6 +205,7 @@ class ApplicationState extends ConsumerState<Application> {
 
   @override
   void dispose() {
+    ref.read(portRoutingActionProvider.notifier).stopScheduler();
     linkManager.destroy();
     _autoUpdateProfilesTaskTimer?.cancel();
     super.dispose();

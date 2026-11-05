@@ -1096,9 +1096,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "installCertificateSuccess": MessageLookupByLibrary.simpleMessage(
       "Сертификат установлен",
     ),
-    "installedAppsPermissionDeniedMessage": MessageLookupByLibrary.simpleMessage(
-      "Разрешение на список приложений отклонено, поэтому установленные приложения недоступны. Предоставьте его вручную в системных настройках.",
-    ),
+    "installedAppsPermissionDeniedMessage":
+        MessageLookupByLibrary.simpleMessage(
+          "Разрешение на список приложений отклонено, поэтому установленные приложения недоступны. Предоставьте его вручную в системных настройках.",
+        ),
     "installedAppsPermissionDesc": MessageLookupByLibrary.simpleMessage(
       "Эта система не выдаёт список установленных приложений без разрешения. Предоставьте его, чтобы настроить прокси для отдельных приложений.",
     ),
@@ -1606,6 +1607,86 @@ class MessageLookup extends MessageLookupByLibrary {
       "Введите другой порт",
     ),
     "portHopping": MessageLookupByLibrary.simpleMessage("Перескок портов"),
+    "portRoutingBlocked": MessageLookupByLibrary.simpleMessage(
+      "Нет подходящих узлов · соединения отклонены",
+    ),
+    "portRoutingCheck": MessageLookupByLibrary.simpleMessage("Проверить порты"),
+    "portRoutingChecking": MessageLookupByLibrary.simpleMessage("Проверка"),
+    "portRoutingCopyHint": MessageLookupByLibrary.simpleMessage(
+      "Щёлкните привязку правой кнопкой для копирования адреса HTTP/SOCKS5, обновления или настройки интервала.",
+    ),
+    "portRoutingCoreUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Ядро или порт прокси недоступны.",
+    ),
+    "portRoutingDescription": MessageLookupByLibrary.simpleMessage(
+      "Каждый локальный порт использует свою подписку. Системный прокси и TUN в этом режиме отключены.",
+    ),
+    "portRoutingDuplicateNode": MessageLookupByLibrary.simpleMessage(
+      "В подписке повторяются имена узлов.",
+    ),
+    "portRoutingEmpty": MessageLookupByLibrary.simpleMessage(
+      "Импортируйте подписку и добавьте привязку порта.",
+    ),
+    "portRoutingEmptySource": MessageLookupByLibrary.simpleMessage(
+      "В подписке нет прокси.",
+    ),
+    "portRoutingFixed": MessageLookupByLibrary.simpleMessage(
+      "Фиксированный узел",
+    ),
+    "portRoutingInvalidBinding": MessageLookupByLibrary.simpleMessage(
+      "Укажите имя, подписку и способ выбора узла.",
+    ),
+    "portRoutingInvalidPort": MessageLookupByLibrary.simpleMessage(
+      "Введите порт от 1024 до 65535.",
+    ),
+    "portRoutingListening": MessageLookupByLibrary.simpleMessage(
+      "Порт открыт · выход не проверен",
+    ),
+    "portRoutingMatches": MessageLookupByLibrary.simpleMessage(
+      "Подходящие узлы",
+    ),
+    "portRoutingMinutes": MessageLookupByLibrary.simpleMessage(
+      "Интервал (минуты)",
+    ),
+    "portRoutingMissingSource": MessageLookupByLibrary.simpleMessage(
+      "Сначала импортируйте или выберите подписку.",
+    ),
+    "portRoutingMode": MessageLookupByLibrary.simpleMessage(
+      "Режим отдельных портов",
+    ),
+    "portRoutingRefreshRange": MessageLookupByLibrary.simpleMessage(
+      "Введите интервал от 1 до 1440 минут.",
+    ),
+    "portRoutingRefreshSettings": MessageLookupByLibrary.simpleMessage(
+      "Обновление подписки",
+    ),
+    "portRoutingRegion": MessageLookupByLibrary.simpleMessage(
+      "Автовыбор по региону",
+    ),
+    "portRoutingRegionHint": MessageLookupByLibrary.simpleMessage(
+      "Ключевые слова в именах узлов разделяются |, например HK|Hong Kong. Автовыбор учитывает задержку, а не пропускную способность.",
+    ),
+    "portRoutingSafeMode": MessageLookupByLibrary.simpleMessage(
+      "Безопасный режим: настройки доступны, но порты прокси не открываются.",
+    ),
+    "portRoutingSourceInUse": MessageLookupByLibrary.simpleMessage(
+      "Перед удалением подписки удалите привязки портов. Выделенная конфигурация управляется этим разделом.",
+    ),
+    "portRoutingStaleUpdate": MessageLookupByLibrary.simpleMessage(
+      "Настройки изменились при обновлении. Повторите попытку.",
+    ),
+    "portRoutingStopped": MessageLookupByLibrary.simpleMessage("Остановлено"),
+    "portRoutingStrategy": MessageLookupByLibrary.simpleMessage("Выбор узла"),
+    "portRoutingTitle": MessageLookupByLibrary.simpleMessage("Порты подписок"),
+    "portRoutingUnchecked": MessageLookupByLibrary.simpleMessage(
+      "Не проверено",
+    ),
+    "portRoutingUnsupported": MessageLookupByLibrary.simpleMessage(
+      "Нужна подписка с независимыми прокси. Вложенные провайдеры, прямые подключения и цепочки не поддерживаются.",
+    ),
+    "portRoutingUpdateFailed": MessageLookupByLibrary.simpleMessage(
+      "Обновление не удалось. Последние рабочие узлы сохранены.",
+    ),
     "portTip": m75,
     "portValue": m76,
     "ports": MessageLookupByLibrary.simpleMessage("Порты"),

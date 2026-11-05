@@ -77,6 +77,11 @@ class CoreService extends CoreHandlerInterface {
   @override
   Future<CoreLifecycleResult> start() => _lifecycle.start();
 
+  int? get processId => switch (_lifecycle.state) {
+    DesktopCoreRunning(:final session) => session.pid,
+    _ => null,
+  };
+
   @override
   Future<CoreLifecycleResult> restart() => _lifecycle.restart();
 

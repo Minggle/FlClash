@@ -6406,7 +6406,7 @@ as List<MitmModule>,
 /// @nodoc
 mixin _$SetupState {
 
- int? get profileId; int? get profileLastUpdateDate; ProfileType get profileType; ExtendType get extendType; List<Rule> get rules; List<ProxyGroup> get proxyGroups; List<Rule> get addedRules; Script? get script; ProfileOverrides get overrides; List<ClashProvider> get clashProviders; Map<String, int> get profileProviders; List<CustomProxy> get appProxies; Map<int, String> get proxyDialers; String? get matchTarget; List<MitmModuleSource> get mitmModules;
+ PortRoutingConfig get portRouting; int? get profileId; int? get profileLastUpdateDate; ProfileType get profileType; ExtendType get extendType; List<Rule> get rules; List<ProxyGroup> get proxyGroups; List<Rule> get addedRules; Script? get script; ProfileOverrides get overrides; List<ClashProvider> get clashProviders; Map<String, int> get profileProviders; List<CustomProxy> get appProxies; Map<int, String> get proxyDialers; String? get matchTarget; List<MitmModuleSource> get mitmModules;
 /// Create a copy of SetupState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -6418,20 +6418,20 @@ $SetupStateCopyWith<SetupState> get copyWith => _$SetupStateCopyWithImpl<SetupSt
 @override
 bool operator ==(Object other) {
   final _this = this as SetupState;
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SetupState&&(identical(other.profileId, _this.profileId) || other.profileId == _this.profileId)&&(identical(other.profileLastUpdateDate, _this.profileLastUpdateDate) || other.profileLastUpdateDate == _this.profileLastUpdateDate)&&(identical(other.profileType, _this.profileType) || other.profileType == _this.profileType)&&(identical(other.extendType, _this.extendType) || other.extendType == _this.extendType)&&const DeepCollectionEquality().equals(other.rules, _this.rules)&&const DeepCollectionEquality().equals(other.proxyGroups, _this.proxyGroups)&&const DeepCollectionEquality().equals(other.addedRules, _this.addedRules)&&(identical(other.script, _this.script) || other.script == _this.script)&&(identical(other.overrides, _this.overrides) || other.overrides == _this.overrides)&&const DeepCollectionEquality().equals(other.clashProviders, _this.clashProviders)&&const DeepCollectionEquality().equals(other.profileProviders, _this.profileProviders)&&const DeepCollectionEquality().equals(other.appProxies, _this.appProxies)&&const DeepCollectionEquality().equals(other.proxyDialers, _this.proxyDialers)&&(identical(other.matchTarget, _this.matchTarget) || other.matchTarget == _this.matchTarget)&&const DeepCollectionEquality().equals(other.mitmModules, _this.mitmModules));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SetupState&&(identical(other.portRouting, _this.portRouting) || other.portRouting == _this.portRouting)&&(identical(other.profileId, _this.profileId) || other.profileId == _this.profileId)&&(identical(other.profileLastUpdateDate, _this.profileLastUpdateDate) || other.profileLastUpdateDate == _this.profileLastUpdateDate)&&(identical(other.profileType, _this.profileType) || other.profileType == _this.profileType)&&(identical(other.extendType, _this.extendType) || other.extendType == _this.extendType)&&const DeepCollectionEquality().equals(other.rules, _this.rules)&&const DeepCollectionEquality().equals(other.proxyGroups, _this.proxyGroups)&&const DeepCollectionEquality().equals(other.addedRules, _this.addedRules)&&(identical(other.script, _this.script) || other.script == _this.script)&&(identical(other.overrides, _this.overrides) || other.overrides == _this.overrides)&&const DeepCollectionEquality().equals(other.clashProviders, _this.clashProviders)&&const DeepCollectionEquality().equals(other.profileProviders, _this.profileProviders)&&const DeepCollectionEquality().equals(other.appProxies, _this.appProxies)&&const DeepCollectionEquality().equals(other.proxyDialers, _this.proxyDialers)&&(identical(other.matchTarget, _this.matchTarget) || other.matchTarget == _this.matchTarget)&&const DeepCollectionEquality().equals(other.mitmModules, _this.mitmModules));
 }
 
 
 @override
 int get hashCode {
   final _this = this as SetupState;
-  return Object.hash(runtimeType,_this.profileId,_this.profileLastUpdateDate,_this.profileType,_this.extendType,const DeepCollectionEquality().hash(_this.rules),const DeepCollectionEquality().hash(_this.proxyGroups),const DeepCollectionEquality().hash(_this.addedRules),_this.script,_this.overrides,const DeepCollectionEquality().hash(_this.clashProviders),const DeepCollectionEquality().hash(_this.profileProviders),const DeepCollectionEquality().hash(_this.appProxies),const DeepCollectionEquality().hash(_this.proxyDialers),_this.matchTarget,const DeepCollectionEquality().hash(_this.mitmModules));
+  return Object.hash(runtimeType,_this.portRouting,_this.profileId,_this.profileLastUpdateDate,_this.profileType,_this.extendType,const DeepCollectionEquality().hash(_this.rules),const DeepCollectionEquality().hash(_this.proxyGroups),const DeepCollectionEquality().hash(_this.addedRules),_this.script,_this.overrides,const DeepCollectionEquality().hash(_this.clashProviders),const DeepCollectionEquality().hash(_this.profileProviders),const DeepCollectionEquality().hash(_this.appProxies),const DeepCollectionEquality().hash(_this.proxyDialers),_this.matchTarget,const DeepCollectionEquality().hash(_this.mitmModules));
 }
 
 @override
 String toString() {
   final _this = this as SetupState;
-  return 'SetupState(profileId: ${_this.profileId}, profileLastUpdateDate: ${_this.profileLastUpdateDate}, profileType: ${_this.profileType}, extendType: ${_this.extendType}, rules: ${_this.rules}, proxyGroups: ${_this.proxyGroups}, addedRules: ${_this.addedRules}, script: ${_this.script}, overrides: ${_this.overrides}, clashProviders: ${_this.clashProviders}, profileProviders: ${_this.profileProviders}, appProxies: ${_this.appProxies}, proxyDialers: ${_this.proxyDialers}, matchTarget: ${_this.matchTarget}, mitmModules: ${_this.mitmModules})';
+  return 'SetupState(portRouting: ${_this.portRouting}, profileId: ${_this.profileId}, profileLastUpdateDate: ${_this.profileLastUpdateDate}, profileType: ${_this.profileType}, extendType: ${_this.extendType}, rules: ${_this.rules}, proxyGroups: ${_this.proxyGroups}, addedRules: ${_this.addedRules}, script: ${_this.script}, overrides: ${_this.overrides}, clashProviders: ${_this.clashProviders}, profileProviders: ${_this.profileProviders}, appProxies: ${_this.appProxies}, proxyDialers: ${_this.proxyDialers}, matchTarget: ${_this.matchTarget}, mitmModules: ${_this.mitmModules})';
 }
 
 
@@ -6442,11 +6442,11 @@ abstract mixin class $SetupStateCopyWith<$Res>  {
   factory $SetupStateCopyWith(SetupState value, $Res Function(SetupState) _then) = _$SetupStateCopyWithImpl;
 @useResult
 $Res call({
- int? profileId, int? profileLastUpdateDate, ProfileType profileType, ExtendType extendType, List<Rule> rules, List<ProxyGroup> proxyGroups, List<Rule> addedRules, Script? script, ProfileOverrides overrides, List<ClashProvider> clashProviders, Map<String, int> profileProviders, List<CustomProxy> appProxies, Map<int, String> proxyDialers, String? matchTarget, List<MitmModuleSource> mitmModules
+ PortRoutingConfig portRouting, int? profileId, int? profileLastUpdateDate, ProfileType profileType, ExtendType extendType, List<Rule> rules, List<ProxyGroup> proxyGroups, List<Rule> addedRules, Script? script, ProfileOverrides overrides, List<ClashProvider> clashProviders, Map<String, int> profileProviders, List<CustomProxy> appProxies, Map<int, String> proxyDialers, String? matchTarget, List<MitmModuleSource> mitmModules
 });
 
 
-$ScriptCopyWith<$Res>? get script;$ProfileOverridesCopyWith<$Res> get overrides;
+$PortRoutingConfigCopyWith<$Res> get portRouting;$ScriptCopyWith<$Res>? get script;$ProfileOverridesCopyWith<$Res> get overrides;
 
 }
 /// @nodoc
@@ -6459,9 +6459,10 @@ class _$SetupStateCopyWithImpl<$Res>
 
 /// Create a copy of SetupState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? profileId = freezed,Object? profileLastUpdateDate = freezed,Object? profileType = null,Object? extendType = null,Object? rules = null,Object? proxyGroups = null,Object? addedRules = null,Object? script = freezed,Object? overrides = null,Object? clashProviders = null,Object? profileProviders = null,Object? appProxies = null,Object? proxyDialers = null,Object? matchTarget = freezed,Object? mitmModules = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? portRouting = null,Object? profileId = freezed,Object? profileLastUpdateDate = freezed,Object? profileType = null,Object? extendType = null,Object? rules = null,Object? proxyGroups = null,Object? addedRules = null,Object? script = freezed,Object? overrides = null,Object? clashProviders = null,Object? profileProviders = null,Object? appProxies = null,Object? proxyDialers = null,Object? matchTarget = freezed,Object? mitmModules = null,}) {
   return _then(SetupState(
-profileId: freezed == profileId ? _self.profileId : profileId // ignore: cast_nullable_to_non_nullable
+portRouting: null == portRouting ? _self.portRouting : portRouting // ignore: cast_nullable_to_non_nullable
+as PortRoutingConfig,profileId: freezed == profileId ? _self.profileId : profileId // ignore: cast_nullable_to_non_nullable
 as int?,profileLastUpdateDate: freezed == profileLastUpdateDate ? _self.profileLastUpdateDate : profileLastUpdateDate // ignore: cast_nullable_to_non_nullable
 as int?,profileType: null == profileType ? _self.profileType : profileType // ignore: cast_nullable_to_non_nullable
 as ProfileType,extendType: null == extendType ? _self.extendType : extendType // ignore: cast_nullable_to_non_nullable
@@ -6480,6 +6481,15 @@ as List<MitmModuleSource>,
   ));
 }
 /// Create a copy of SetupState
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PortRoutingConfigCopyWith<$Res> get portRouting {
+  
+  return $PortRoutingConfigCopyWith<$Res>(_self.portRouting, (value) {
+    return _then(_self.copyWith(portRouting: value));
+  });
+}/// Create a copy of SetupState
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -6582,10 +6592,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? profileId,  int? profileLastUpdateDate,  ProfileType profileType,  ExtendType extendType,  List<Rule> rules,  List<ProxyGroup> proxyGroups,  List<Rule> addedRules,  Script? script,  ProfileOverrides overrides,  List<ClashProvider> clashProviders,  Map<String, int> profileProviders,  List<CustomProxy> appProxies,  Map<int, String> proxyDialers,  String? matchTarget,  List<MitmModuleSource> mitmModules)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( PortRoutingConfig portRouting,  int? profileId,  int? profileLastUpdateDate,  ProfileType profileType,  ExtendType extendType,  List<Rule> rules,  List<ProxyGroup> proxyGroups,  List<Rule> addedRules,  Script? script,  ProfileOverrides overrides,  List<ClashProvider> clashProviders,  Map<String, int> profileProviders,  List<CustomProxy> appProxies,  Map<int, String> proxyDialers,  String? matchTarget,  List<MitmModuleSource> mitmModules)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _SetupState() when $default != null:
-return $default(_that.profileId,_that.profileLastUpdateDate,_that.profileType,_that.extendType,_that.rules,_that.proxyGroups,_that.addedRules,_that.script,_that.overrides,_that.clashProviders,_that.profileProviders,_that.appProxies,_that.proxyDialers,_that.matchTarget,_that.mitmModules);case _:
+return $default(_that.portRouting,_that.profileId,_that.profileLastUpdateDate,_that.profileType,_that.extendType,_that.rules,_that.proxyGroups,_that.addedRules,_that.script,_that.overrides,_that.clashProviders,_that.profileProviders,_that.appProxies,_that.proxyDialers,_that.matchTarget,_that.mitmModules);case _:
   return orElse();
 
 }
@@ -6603,10 +6613,10 @@ return $default(_that.profileId,_that.profileLastUpdateDate,_that.profileType,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? profileId,  int? profileLastUpdateDate,  ProfileType profileType,  ExtendType extendType,  List<Rule> rules,  List<ProxyGroup> proxyGroups,  List<Rule> addedRules,  Script? script,  ProfileOverrides overrides,  List<ClashProvider> clashProviders,  Map<String, int> profileProviders,  List<CustomProxy> appProxies,  Map<int, String> proxyDialers,  String? matchTarget,  List<MitmModuleSource> mitmModules)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( PortRoutingConfig portRouting,  int? profileId,  int? profileLastUpdateDate,  ProfileType profileType,  ExtendType extendType,  List<Rule> rules,  List<ProxyGroup> proxyGroups,  List<Rule> addedRules,  Script? script,  ProfileOverrides overrides,  List<ClashProvider> clashProviders,  Map<String, int> profileProviders,  List<CustomProxy> appProxies,  Map<int, String> proxyDialers,  String? matchTarget,  List<MitmModuleSource> mitmModules)  $default,) {final _that = this;
 switch (_that) {
 case _SetupState():
-return $default(_that.profileId,_that.profileLastUpdateDate,_that.profileType,_that.extendType,_that.rules,_that.proxyGroups,_that.addedRules,_that.script,_that.overrides,_that.clashProviders,_that.profileProviders,_that.appProxies,_that.proxyDialers,_that.matchTarget,_that.mitmModules);case _:
+return $default(_that.portRouting,_that.profileId,_that.profileLastUpdateDate,_that.profileType,_that.extendType,_that.rules,_that.proxyGroups,_that.addedRules,_that.script,_that.overrides,_that.clashProviders,_that.profileProviders,_that.appProxies,_that.proxyDialers,_that.matchTarget,_that.mitmModules);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -6623,10 +6633,10 @@ return $default(_that.profileId,_that.profileLastUpdateDate,_that.profileType,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? profileId,  int? profileLastUpdateDate,  ProfileType profileType,  ExtendType extendType,  List<Rule> rules,  List<ProxyGroup> proxyGroups,  List<Rule> addedRules,  Script? script,  ProfileOverrides overrides,  List<ClashProvider> clashProviders,  Map<String, int> profileProviders,  List<CustomProxy> appProxies,  Map<int, String> proxyDialers,  String? matchTarget,  List<MitmModuleSource> mitmModules)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( PortRoutingConfig portRouting,  int? profileId,  int? profileLastUpdateDate,  ProfileType profileType,  ExtendType extendType,  List<Rule> rules,  List<ProxyGroup> proxyGroups,  List<Rule> addedRules,  Script? script,  ProfileOverrides overrides,  List<ClashProvider> clashProviders,  Map<String, int> profileProviders,  List<CustomProxy> appProxies,  Map<int, String> proxyDialers,  String? matchTarget,  List<MitmModuleSource> mitmModules)?  $default,) {final _that = this;
 switch (_that) {
 case _SetupState() when $default != null:
-return $default(_that.profileId,_that.profileLastUpdateDate,_that.profileType,_that.extendType,_that.rules,_that.proxyGroups,_that.addedRules,_that.script,_that.overrides,_that.clashProviders,_that.profileProviders,_that.appProxies,_that.proxyDialers,_that.matchTarget,_that.mitmModules);case _:
+return $default(_that.portRouting,_that.profileId,_that.profileLastUpdateDate,_that.profileType,_that.extendType,_that.rules,_that.proxyGroups,_that.addedRules,_that.script,_that.overrides,_that.clashProviders,_that.profileProviders,_that.appProxies,_that.proxyDialers,_that.matchTarget,_that.mitmModules);case _:
   return null;
 
 }
@@ -6638,9 +6648,10 @@ return $default(_that.profileId,_that.profileLastUpdateDate,_that.profileType,_t
 
 
 class _SetupState implements SetupState {
-  const _SetupState({required this.profileId, required this.profileLastUpdateDate, required this.profileType, required this.extendType, required  List<Rule> rules, required  List<ProxyGroup> proxyGroups, required  List<Rule> addedRules, required this.script, required this.overrides,  List<ClashProvider> clashProviders = const [],  Map<String, int> profileProviders = const {},  List<CustomProxy> appProxies = const [],  Map<int, String> proxyDialers = const {}, this.matchTarget,  List<MitmModuleSource> mitmModules = const []}): _rules = rules,_proxyGroups = proxyGroups,_addedRules = addedRules,_clashProviders = clashProviders,_profileProviders = profileProviders,_appProxies = appProxies,_proxyDialers = proxyDialers,_mitmModules = mitmModules;
+  const _SetupState({this.portRouting = const PortRoutingConfig(), required this.profileId, required this.profileLastUpdateDate, required this.profileType, required this.extendType, required  List<Rule> rules, required  List<ProxyGroup> proxyGroups, required  List<Rule> addedRules, required this.script, required this.overrides,  List<ClashProvider> clashProviders = const [],  Map<String, int> profileProviders = const {},  List<CustomProxy> appProxies = const [],  Map<int, String> proxyDialers = const {}, this.matchTarget,  List<MitmModuleSource> mitmModules = const []}): _rules = rules,_proxyGroups = proxyGroups,_addedRules = addedRules,_clashProviders = clashProviders,_profileProviders = profileProviders,_appProxies = appProxies,_proxyDialers = proxyDialers,_mitmModules = mitmModules;
   
 
+@override@JsonKey() final  PortRoutingConfig portRouting;
 @override final  int? profileId;
 @override final  int? profileLastUpdateDate;
 @override final  ProfileType profileType;
@@ -6715,18 +6726,18 @@ _$SetupStateCopyWith<_SetupState> get copyWith => __$SetupStateCopyWithImpl<_Set
 
 @override
 bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SetupState&&(identical(other.profileId, profileId) || other.profileId == profileId)&&(identical(other.profileLastUpdateDate, profileLastUpdateDate) || other.profileLastUpdateDate == profileLastUpdateDate)&&(identical(other.profileType, profileType) || other.profileType == profileType)&&(identical(other.extendType, extendType) || other.extendType == extendType)&&const DeepCollectionEquality().equals(other.rules, _rules)&&const DeepCollectionEquality().equals(other.proxyGroups, _proxyGroups)&&const DeepCollectionEquality().equals(other.addedRules, _addedRules)&&(identical(other.script, script) || other.script == script)&&(identical(other.overrides, overrides) || other.overrides == overrides)&&const DeepCollectionEquality().equals(other.clashProviders, _clashProviders)&&const DeepCollectionEquality().equals(other.profileProviders, _profileProviders)&&const DeepCollectionEquality().equals(other.appProxies, _appProxies)&&const DeepCollectionEquality().equals(other.proxyDialers, _proxyDialers)&&(identical(other.matchTarget, matchTarget) || other.matchTarget == matchTarget)&&const DeepCollectionEquality().equals(other.mitmModules, _mitmModules));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _SetupState&&(identical(other.portRouting, portRouting) || other.portRouting == portRouting)&&(identical(other.profileId, profileId) || other.profileId == profileId)&&(identical(other.profileLastUpdateDate, profileLastUpdateDate) || other.profileLastUpdateDate == profileLastUpdateDate)&&(identical(other.profileType, profileType) || other.profileType == profileType)&&(identical(other.extendType, extendType) || other.extendType == extendType)&&const DeepCollectionEquality().equals(other.rules, _rules)&&const DeepCollectionEquality().equals(other.proxyGroups, _proxyGroups)&&const DeepCollectionEquality().equals(other.addedRules, _addedRules)&&(identical(other.script, script) || other.script == script)&&(identical(other.overrides, overrides) || other.overrides == overrides)&&const DeepCollectionEquality().equals(other.clashProviders, _clashProviders)&&const DeepCollectionEquality().equals(other.profileProviders, _profileProviders)&&const DeepCollectionEquality().equals(other.appProxies, _appProxies)&&const DeepCollectionEquality().equals(other.proxyDialers, _proxyDialers)&&(identical(other.matchTarget, matchTarget) || other.matchTarget == matchTarget)&&const DeepCollectionEquality().equals(other.mitmModules, _mitmModules));
 }
 
 
 @override
 int get hashCode {
-    return Object.hash(runtimeType,profileId,profileLastUpdateDate,profileType,extendType,const DeepCollectionEquality().hash(_rules),const DeepCollectionEquality().hash(_proxyGroups),const DeepCollectionEquality().hash(_addedRules),script,overrides,const DeepCollectionEquality().hash(_clashProviders),const DeepCollectionEquality().hash(_profileProviders),const DeepCollectionEquality().hash(_appProxies),const DeepCollectionEquality().hash(_proxyDialers),matchTarget,const DeepCollectionEquality().hash(_mitmModules));
+    return Object.hash(runtimeType,portRouting,profileId,profileLastUpdateDate,profileType,extendType,const DeepCollectionEquality().hash(_rules),const DeepCollectionEquality().hash(_proxyGroups),const DeepCollectionEquality().hash(_addedRules),script,overrides,const DeepCollectionEquality().hash(_clashProviders),const DeepCollectionEquality().hash(_profileProviders),const DeepCollectionEquality().hash(_appProxies),const DeepCollectionEquality().hash(_proxyDialers),matchTarget,const DeepCollectionEquality().hash(_mitmModules));
 }
 
 @override
 String toString() {
-    return 'SetupState(profileId: $profileId, profileLastUpdateDate: $profileLastUpdateDate, profileType: $profileType, extendType: $extendType, rules: $rules, proxyGroups: $proxyGroups, addedRules: $addedRules, script: $script, overrides: $overrides, clashProviders: $clashProviders, profileProviders: $profileProviders, appProxies: $appProxies, proxyDialers: $proxyDialers, matchTarget: $matchTarget, mitmModules: $mitmModules)';
+    return 'SetupState(portRouting: $portRouting, profileId: $profileId, profileLastUpdateDate: $profileLastUpdateDate, profileType: $profileType, extendType: $extendType, rules: $rules, proxyGroups: $proxyGroups, addedRules: $addedRules, script: $script, overrides: $overrides, clashProviders: $clashProviders, profileProviders: $profileProviders, appProxies: $appProxies, proxyDialers: $proxyDialers, matchTarget: $matchTarget, mitmModules: $mitmModules)';
 }
 
 
@@ -6737,11 +6748,11 @@ abstract mixin class _$SetupStateCopyWith<$Res> implements $SetupStateCopyWith<$
   factory _$SetupStateCopyWith(_SetupState value, $Res Function(_SetupState) _then) = __$SetupStateCopyWithImpl;
 @override @useResult
 $Res call({
- int? profileId, int? profileLastUpdateDate, ProfileType profileType, ExtendType extendType, List<Rule> rules, List<ProxyGroup> proxyGroups, List<Rule> addedRules, Script? script, ProfileOverrides overrides, List<ClashProvider> clashProviders, Map<String, int> profileProviders, List<CustomProxy> appProxies, Map<int, String> proxyDialers, String? matchTarget, List<MitmModuleSource> mitmModules
+ PortRoutingConfig portRouting, int? profileId, int? profileLastUpdateDate, ProfileType profileType, ExtendType extendType, List<Rule> rules, List<ProxyGroup> proxyGroups, List<Rule> addedRules, Script? script, ProfileOverrides overrides, List<ClashProvider> clashProviders, Map<String, int> profileProviders, List<CustomProxy> appProxies, Map<int, String> proxyDialers, String? matchTarget, List<MitmModuleSource> mitmModules
 });
 
 
-@override $ScriptCopyWith<$Res>? get script;@override $ProfileOverridesCopyWith<$Res> get overrides;
+@override $PortRoutingConfigCopyWith<$Res> get portRouting;@override $ScriptCopyWith<$Res>? get script;@override $ProfileOverridesCopyWith<$Res> get overrides;
 
 }
 /// @nodoc
@@ -6754,9 +6765,10 @@ class __$SetupStateCopyWithImpl<$Res>
 
 /// Create a copy of SetupState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? profileId = freezed,Object? profileLastUpdateDate = freezed,Object? profileType = null,Object? extendType = null,Object? rules = null,Object? proxyGroups = null,Object? addedRules = null,Object? script = freezed,Object? overrides = null,Object? clashProviders = null,Object? profileProviders = null,Object? appProxies = null,Object? proxyDialers = null,Object? matchTarget = freezed,Object? mitmModules = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? portRouting = null,Object? profileId = freezed,Object? profileLastUpdateDate = freezed,Object? profileType = null,Object? extendType = null,Object? rules = null,Object? proxyGroups = null,Object? addedRules = null,Object? script = freezed,Object? overrides = null,Object? clashProviders = null,Object? profileProviders = null,Object? appProxies = null,Object? proxyDialers = null,Object? matchTarget = freezed,Object? mitmModules = null,}) {
   return _then(_SetupState(
-profileId: freezed == profileId ? _self.profileId : profileId // ignore: cast_nullable_to_non_nullable
+portRouting: null == portRouting ? _self.portRouting : portRouting // ignore: cast_nullable_to_non_nullable
+as PortRoutingConfig,profileId: freezed == profileId ? _self.profileId : profileId // ignore: cast_nullable_to_non_nullable
 as int?,profileLastUpdateDate: freezed == profileLastUpdateDate ? _self.profileLastUpdateDate : profileLastUpdateDate // ignore: cast_nullable_to_non_nullable
 as int?,profileType: null == profileType ? _self.profileType : profileType // ignore: cast_nullable_to_non_nullable
 as ProfileType,extendType: null == extendType ? _self.extendType : extendType // ignore: cast_nullable_to_non_nullable
@@ -6776,6 +6788,15 @@ as List<MitmModuleSource>,
 }
 
 /// Create a copy of SetupState
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PortRoutingConfigCopyWith<$Res> get portRouting {
+  
+  return $PortRoutingConfigCopyWith<$Res>(_self.portRouting, (value) {
+    return _then(_self.copyWith(portRouting: value));
+  });
+}/// Create a copy of SetupState
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')

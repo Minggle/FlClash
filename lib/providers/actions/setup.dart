@@ -516,8 +516,11 @@ class SetupAction extends _$SetupAction {
             ),
           }
         : profileBase?.base.config ?? await _core.readConfig(profileId);
-    final proxyGroups = isCustom ? setupState.proxyGroups : <ProxyGroup>[];
-    final rules = isCustom ? setupState.rules : <Rule>[];
+    final portWorkspace = setupState.portRouting.isActive(profileId);
+    final proxyGroups = isCustom && !portWorkspace
+        ? setupState.proxyGroups
+        : <ProxyGroup>[];
+    final rules = isCustom && !portWorkspace ? setupState.rules : <Rule>[];
     if (hasScript) {
       rawConfig = await handleEvaluate(scriptContent!, rawConfig);
     }
@@ -527,11 +530,20 @@ class SetupAction extends _$SetupAction {
       proxyGroups: proxyGroups,
       rules: rules,
     );
+    Map<String, dynamic> portProviders = const {};
+    if (portWorkspace) {
+      patchConfig = portRoutingPatch(patchConfig);
+      final fragment = await ref
+          .read(portRoutingActionProvider.notifier)
+          .prepare(setupState.portRouting);
+      rawConfig = fragment.config;
+      portProviders = fragment.providers;
+    }
     final res = await makeRealProfileTask(
       MakeRealProfileState(
         rules: rules,
         proxyGroups: proxyGroups,
-        injectedProxyProviders: injected.proxies,
+        injectedProxyProviders: {...injected.proxies, ...portProviders},
         injectedRuleProviders: injected.rules,
         profilesPath: directory,
         profileId: profileId,
@@ -638,6 +650,9 @@ class SetupAction extends _$SetupAction {
   }
 
   PatchClashConfig _effectivePatchConfig(PatchClashConfig patchConfig) {
+    if (ref.read(portRoutingActiveProvider)) {
+      patchConfig = portRoutingPatch(patchConfig);
+    }
     if (ref.read(safeModeProvider)) {
       return patchConfig.copyWith(
         tun: patchConfig.tun.copyWith(enable: false),
@@ -664,7 +679,9 @@ class SetupAction extends _$SetupAction {
 
   @visibleForTesting
   Future<bool> requestAdmin(bool enableTun) async {
-    if (!enableTun || ref.read(safeModeProvider)) {
+    if (!enableTun ||
+        ref.read(safeModeProvider) ||
+        ref.read(portRoutingActiveProvider)) {
       return true;
     }
     final authorizationState = ref.read(authorizedTunEnableProvider);

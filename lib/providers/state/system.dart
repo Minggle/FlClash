@@ -92,8 +92,8 @@ TrayState trayState(Ref ref) {
     mode: clashConfig.mode,
     port: clashConfig.mixedPort,
     autoLaunch: appSetting.autoLaunch,
-    systemProxy: systemProxy,
-    tunEnable: clashConfig.tunEnable,
+    systemProxy: systemProxy && !ref.watch(portRoutingActiveProvider),
+    tunEnable: clashConfig.tunEnable && !ref.watch(portRoutingActiveProvider),
     isStart: isStart,
     suspended: isStart && suspended,
     groups: groups,
@@ -178,7 +178,9 @@ bool shouldPatchSystemDns(Ref ref) {
   final autoSetSystemDns = ref.watch(
     networkSettingProvider.select((state) => state.autoSetSystemDns),
   );
-  if (!autoSetSystemDns || ref.watch(safeModeProvider)) {
+  if (!autoSetSystemDns ||
+      ref.watch(safeModeProvider) ||
+      ref.watch(portRoutingActiveProvider)) {
     return false;
   }
   final isStart = ref.watch(runTimeProvider.select((state) => state != null));

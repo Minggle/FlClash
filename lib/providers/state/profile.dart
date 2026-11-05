@@ -45,6 +45,7 @@ Future<ClashConfig> clashConfig(Ref ref, int profileId) async {
 
 @riverpod
 Future<SetupState> setupState(Ref ref, int? profileId) async {
+  final portRouting = ref.watch(portRoutingSettingProvider);
   final profile = ref.watch(profileProvider(profileId));
   final scriptId = profile?.scriptId;
   final profileLastUpdateDate = profile?.lastUpdateDate?.millisecondsSinceEpoch;
@@ -106,6 +107,9 @@ Future<SetupState> setupState(Ref ref, int? profileId) async {
     }
   }
   return SetupState(
+    portRouting: portRouting.isActive(profileId)
+        ? portRouting
+        : const PortRoutingConfig(),
     mitmModules: mitmModules == null
         ? const []
         : await mitmModuleSources(await mitmModules),

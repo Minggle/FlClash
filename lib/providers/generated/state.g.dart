@@ -89,7 +89,7 @@ final class CoreOptionsProvider
   }
 }
 
-String _$coreOptionsHash() => r'ef7cb84b1c8ad89180f56c91cf863376c1ff9db5';
+String _$coreOptionsHash() => r'43945407c97ebce7e8106973f53ca83ce95c861a';
 
 @ProviderFor(setupPatch)
 final setupPatchProvider = SetupPatchProvider._();
@@ -220,7 +220,7 @@ final class TrayStateProvider
   }
 }
 
-String _$trayStateHash() => r'd4fe17e62e479ff316ab5deb11475b4ea533d0bb';
+String _$trayStateHash() => r'53f8f7d7585a5527bca3e277908555500ceb0f38';
 
 /// Measured delays of the proxies the tray lists, by group and then proxy
 /// name. Resolved like a proxy card, so a nested group shows its selection.
@@ -437,7 +437,7 @@ final class ShouldPatchSystemDnsProvider
 }
 
 String _$shouldPatchSystemDnsHash() =>
-    r'f74bcdbae504e9528b2e960b8620d097c27f3ca9';
+    r'7570ef88f613ad643efa19bd7cb0d31b94c7cf08';
 
 @ProviderFor(sharedState)
 final sharedStateProvider = SharedStateProvider._();
@@ -1954,7 +1954,7 @@ final class ProxyStateProvider
   }
 }
 
-String _$proxyStateHash() => r'76a71ab5da07dca9aeb351282c5c03ab222d0760';
+String _$proxyStateHash() => r'c57367f1fba348c1277826a6c4121aef54cfcac4';
 
 /// Watching the delay map instead would drop nodes one probe at a time, and
 /// reading it on any other rebuild would drop them whenever something
@@ -3659,7 +3659,7 @@ final class SetupStateProvider
   }
 }
 
-String _$setupStateHash() => r'4cfdb0a779dc8097c8c1027b73252f19f925a3ad';
+String _$setupStateHash() => r'994aa79ae4cc2a81dee054e6ba14b2f182e49ff2';
 
 final class SetupStateFamily extends $Family
     with $FunctionalFamilyOverride<FutureOr<SetupState>, int?> {

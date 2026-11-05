@@ -20,6 +20,10 @@ class ProfilesAction extends _$ProfilesAction {
   }
 
   Future<void> deleteProfile(int id) async {
+    if (ref.read(portRoutingActionProvider.notifier).references(id) ||
+        ref.read(portRoutingSettingProvider).workspaceProfileId == id) {
+      throw MessageException(currentAppLocalizations.portRoutingSourceInUse);
+    }
     await ref.read(profilesProvider.notifier).del(id);
     await clearEffect(id);
     final currentProfileId = ref.read(currentProfileIdProvider);
@@ -44,6 +48,7 @@ class ProfilesAction extends _$ProfilesAction {
       for (final profile in ref.read(profilesProvider)) profile.id,
     ]) {
       final profile = ref.read(profilesProvider).getProfile(id);
+      if (ref.read(portRoutingActionProvider.notifier).owns(id)) continue;
       if (profile == null || !profile.autoUpdate) continue;
       final isNotNeedUpdate = profile.lastUpdateDate
           ?.add(profile.autoUpdateDuration)
@@ -139,6 +144,11 @@ class ProfilesAction extends _$ProfilesAction {
     Profile profile, {
     bool showLoading = false,
   }) async {
+    if (ref.read(portRoutingActionProvider.notifier).owns(profile.id)) {
+      ref.read(profilesProvider.notifier).put(profile);
+      await ref.read(portRoutingActionProvider.notifier).refresh(profile.id);
+      return;
+    }
     final operation = showLoading
         ? ref.read(updatingKeysProvider.notifier).start(profile.updatingKey)
         : null;

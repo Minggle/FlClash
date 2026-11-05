@@ -1127,9 +1127,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "installCertificateSuccess": MessageLookupByLibrary.simpleMessage(
       "Certificat installé",
     ),
-    "installedAppsPermissionDeniedMessage": MessageLookupByLibrary.simpleMessage(
-      "L’autorisation de la liste des apps a été refusée ; les apps installées ne peuvent donc pas être listées. Veuillez l’accorder manuellement dans les réglages du système.",
-    ),
+    "installedAppsPermissionDeniedMessage":
+        MessageLookupByLibrary.simpleMessage(
+          "L’autorisation de la liste des apps a été refusée ; les apps installées ne peuvent donc pas être listées. Veuillez l’accorder manuellement dans les réglages du système.",
+        ),
     "installedAppsPermissionDesc": MessageLookupByLibrary.simpleMessage(
       "Ce système masque la liste des apps installées tant que l’autorisation n’est pas accordée. Accordez-la pour configurer le proxy par app.",
     ),
@@ -1651,6 +1652,88 @@ class MessageLookup extends MessageLookupByLibrary {
       "Veuillez saisir un autre port",
     ),
     "portHopping": MessageLookupByLibrary.simpleMessage("Saut de port"),
+    "portRoutingBlocked": MessageLookupByLibrary.simpleMessage(
+      "Aucun nœud correspondant · connexions refusées",
+    ),
+    "portRoutingCheck": MessageLookupByLibrary.simpleMessage(
+      "Vérifier les ports",
+    ),
+    "portRoutingChecking": MessageLookupByLibrary.simpleMessage("Vérification"),
+    "portRoutingCopyHint": MessageLookupByLibrary.simpleMessage(
+      "Un clic droit permet de copier l’adresse HTTP/SOCKS5, d’actualiser l’abonnement ou de modifier son intervalle.",
+    ),
+    "portRoutingCoreUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Le cœur ou le port proxy est indisponible.",
+    ),
+    "portRoutingDescription": MessageLookupByLibrary.simpleMessage(
+      "Chaque port local utilise son abonnement. Le proxy système et TUN restent désactivés dans ce mode.",
+    ),
+    "portRoutingDuplicateNode": MessageLookupByLibrary.simpleMessage(
+      "Des noms de nœuds sont en double.",
+    ),
+    "portRoutingEmpty": MessageLookupByLibrary.simpleMessage(
+      "Importez un abonnement, puis ajoutez un port.",
+    ),
+    "portRoutingEmptySource": MessageLookupByLibrary.simpleMessage(
+      "L’abonnement ne contient aucun nœud proxy.",
+    ),
+    "portRoutingFixed": MessageLookupByLibrary.simpleMessage("Nœud fixe"),
+    "portRoutingInvalidBinding": MessageLookupByLibrary.simpleMessage(
+      "Renseignez le nom, l’abonnement et la sélection du nœud.",
+    ),
+    "portRoutingInvalidPort": MessageLookupByLibrary.simpleMessage(
+      "Saisissez un port de 1024 à 65535.",
+    ),
+    "portRoutingListening": MessageLookupByLibrary.simpleMessage(
+      "En écoute · sortie non vérifiée",
+    ),
+    "portRoutingMatches": MessageLookupByLibrary.simpleMessage(
+      "Nœuds correspondants",
+    ),
+    "portRoutingMinutes": MessageLookupByLibrary.simpleMessage(
+      "Intervalle (minutes)",
+    ),
+    "portRoutingMissingSource": MessageLookupByLibrary.simpleMessage(
+      "Importez ou sélectionnez d’abord un abonnement.",
+    ),
+    "portRoutingMode": MessageLookupByLibrary.simpleMessage(
+      "Mode ports dédiés",
+    ),
+    "portRoutingRefreshRange": MessageLookupByLibrary.simpleMessage(
+      "Saisissez un intervalle de 1 à 1440 minutes.",
+    ),
+    "portRoutingRefreshSettings": MessageLookupByLibrary.simpleMessage(
+      "Actualisation de l’abonnement",
+    ),
+    "portRoutingRegion": MessageLookupByLibrary.simpleMessage(
+      "Automatique par région",
+    ),
+    "portRoutingRegionHint": MessageLookupByLibrary.simpleMessage(
+      "Séparez les mots-clés des noms par |, par exemple FR|France. La sélection utilise la latence, pas le débit.",
+    ),
+    "portRoutingSafeMode": MessageLookupByLibrary.simpleMessage(
+      "Mode sans échec : les réglages restent modifiables, mais aucun port proxy ne s’ouvre.",
+    ),
+    "portRoutingSourceInUse": MessageLookupByLibrary.simpleMessage(
+      "Retirez les ports associés avant de supprimer cet abonnement. La configuration dédiée est gérée ici.",
+    ),
+    "portRoutingStaleUpdate": MessageLookupByLibrary.simpleMessage(
+      "La configuration a changé pendant l’actualisation. Réessayez.",
+    ),
+    "portRoutingStopped": MessageLookupByLibrary.simpleMessage("Arrêté"),
+    "portRoutingStrategy": MessageLookupByLibrary.simpleMessage(
+      "Sélection du nœud",
+    ),
+    "portRoutingTitle": MessageLookupByLibrary.simpleMessage(
+      "Ports des abonnements",
+    ),
+    "portRoutingUnchecked": MessageLookupByLibrary.simpleMessage("Non vérifié"),
+    "portRoutingUnsupported": MessageLookupByLibrary.simpleMessage(
+      "Utilisez un abonnement contenant des nœuds indépendants. Les fournisseurs imbriqués, nœuds directs et chaînes ne sont pas pris en charge.",
+    ),
+    "portRoutingUpdateFailed": MessageLookupByLibrary.simpleMessage(
+      "Échec de l’actualisation. Les derniers nœuds valides sont conservés.",
+    ),
     "portTip": m75,
     "portValue": m76,
     "ports": MessageLookupByLibrary.simpleMessage("Ports"),

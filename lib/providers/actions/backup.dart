@@ -132,9 +132,17 @@ class BackupAction extends _$BackupAction {
     final accessControlProps = config.vpnProps.accessControlProps.hasPackages
         ? config.vpnProps.accessControlProps
         : ref.read(vpnSettingProvider).accessControlProps;
+    final restoredPortRouting = config.portRouting.remapProfiles({
+      for (final profile in await database.profilesDao.query().get())
+        profile.id: profile.id,
+    });
+    await ref
+        .read(portRoutingActionProvider.notifier)
+        .discardCaches(restoredPortRouting);
     writeConfig(
       ref,
       config.copyWith(
+        portRouting: restoredPortRouting,
         davProps: config.davProps ?? ref.read(davSettingProvider),
         vpnProps: config.vpnProps.copyWith(
           accessControlProps: accessControlProps,
