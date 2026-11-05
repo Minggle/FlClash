@@ -4,6 +4,18 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'generated/config.g.dart';
 
+@Riverpod(keepAlive: true)
+class PortRoutingSetting extends _$PortRoutingSetting
+    with AutoDisposeNotifierMixin {
+  @override
+  PortRoutingConfig build() => const PortRoutingConfig();
+}
+
+@riverpod
+bool portRoutingActive(Ref ref) => ref
+    .watch(portRoutingSettingProvider)
+    .isActive(ref.watch(currentProfileIdProvider));
+
 @riverpod
 class AppSetting extends _$AppSetting with AutoDisposeNotifierMixin {
   @override
@@ -109,6 +121,7 @@ Config _config(Ref ref) {
   final patchClashConfig = ref.watch(patchClashConfigProvider);
   final excludeSSIDs = ref.watch(excludeSSIDsProvider);
   return Config(
+    portRouting: ref.watch(portRoutingSettingProvider),
     appSettingProps: appSettingProps,
     windowProps: windowProps,
     vpnProps: vpnProps,
@@ -124,6 +137,7 @@ Config _config(Ref ref) {
 }
 
 void writeConfig(Ref ref, Config config) {
+  ref.read(portRoutingSettingProvider.notifier).value = config.portRouting;
   ref.read(appSettingProvider.notifier).value = config.appSettingProps;
   ref.read(windowSettingProvider.notifier).value = config.windowProps;
   ref.read(vpnSettingProvider.notifier).value = config.vpnProps;
@@ -141,6 +155,7 @@ void writeConfig(Ref ref, Config config) {
 
 List<Override> buildConfigOverrides(Config config) {
   return [
+    portRoutingSettingProvider.overrideWithBuild((_, _) => config.portRouting),
     appSettingProvider.overrideWithBuild((_, _) => config.appSettingProps),
     windowSettingProvider.overrideWithBuild((_, _) => config.windowProps),
     vpnSettingProvider.overrideWithBuild((_, _) => config.vpnProps),

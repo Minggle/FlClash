@@ -504,6 +504,7 @@ abstract class ThemeProps with _$ThemeProps {
 abstract class Config with _$Config {
   const factory Config({
     int? currentProfileId,
+    @Default(PortRoutingConfig()) PortRoutingConfig portRouting,
     @Default([]) List<HotKeyAction> hotKeyActions,
     @JsonKey(fromJson: AppSettingProps.safeFromJson)
     @Default(defaultAppSettingProps)

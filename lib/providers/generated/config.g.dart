@@ -9,6 +9,100 @@ part of '../config.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
 
+@ProviderFor(PortRoutingSetting)
+final portRoutingSettingProvider = PortRoutingSettingProvider._();
+
+final class PortRoutingSettingProvider
+    extends $NotifierProvider<PortRoutingSetting, PortRoutingConfig> {
+  PortRoutingSettingProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'portRoutingSettingProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$portRoutingSettingHash();
+
+  @$internal
+  @override
+  PortRoutingSetting create() => PortRoutingSetting();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(PortRoutingConfig value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<PortRoutingConfig>(value),
+    );
+  }
+}
+
+String _$portRoutingSettingHash() =>
+    r'529a6ae7abddde854331b834467d847dc6a056fa';
+
+abstract class _$PortRoutingSetting extends $Notifier<PortRoutingConfig> {
+  PortRoutingConfig build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<PortRoutingConfig, PortRoutingConfig>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<PortRoutingConfig, PortRoutingConfig>,
+              PortRoutingConfig,
+              Object?,
+              Object?
+            >;
+    return element.handleCreate(ref, build);
+  }
+}
+
+@ProviderFor(portRoutingActive)
+final portRoutingActiveProvider = PortRoutingActiveProvider._();
+
+final class PortRoutingActiveProvider
+    extends $FunctionalProvider<bool, bool, bool>
+    with $Provider<bool> {
+  PortRoutingActiveProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'portRoutingActiveProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$portRoutingActiveHash();
+
+  @$internal
+  @override
+  $ProviderElement<bool> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  bool create(Ref ref) {
+    return portRoutingActive(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(bool value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<bool>(value),
+    );
+  }
+}
+
+String _$portRoutingActiveHash() => r'ef1a9e170f15980dbaa8864c7200caf0487511f4';
+
 @ProviderFor(AppSetting)
 final appSettingProvider = AppSettingProvider._();
 
@@ -619,4 +713,4 @@ final class _ConfigProvider extends $FunctionalProvider<Config, Config, Config>
   }
 }
 
-String _$_configHash() => r'a9e717216fc1ca6b3526907bd578c4982bb6961a';
+String _$_configHash() => r'da67fb7170d023d14ed50c70b09fd68929022ea7';
