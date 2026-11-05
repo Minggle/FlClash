@@ -17,6 +17,7 @@ import 'config/advanced.dart';
 import 'developer.dart';
 import 'disclaimer.dart';
 import 'theme.dart';
+import 'port_routing.dart';
 
 class ToolsView extends ConsumerStatefulWidget {
   const ToolsView({super.key});
@@ -50,6 +51,12 @@ class _ToolViewState extends ConsumerState<ToolsView> {
     return generateSection(
       title: context.appLocalizations.settings,
       items: [
+        if (system.isWindows)
+          ListItem.open(
+            leading: const GlyphIcon(AppGlyphs.proxies),
+            title: Text(context.appLocalizations.portRoutingTitle),
+            widget: const PortRoutingView(),
+          ),
         const _LocaleItem(),
         const _ThemeItem(),
         if (system.isDesktop) const _HotkeyItem(),
