@@ -61,6 +61,14 @@ gh variable delete LINUX_CI_RUNNER --repo Minggle/FlClash
 
 已排队的任务需要取消后重新运行才会使用回退后的 runner。原有上游发布 job 和独立的 Windows 发布 workflow 不受这个变量控制。
 
+macOS ARM runner 容量不足时，可将普通编译检查临时切到 Intel runner：
+
+```powershell
+gh variable set MACOS_CI_RUNNER --repo Minggle/FlClash --body macos-15-intel
+```
+
+未设置 `MACOS_CI_RUNNER` 时仍用 `macos-latest`，删除变量即可恢复。Intel 编译不能代替 ARM 编译验证；此开关只影响普通检查，原有发布矩阵中的 macOS 两种架构不变。
+
 参考：[Instabox CI 官方文档](https://instabox.sh/docs/ci.md)。
 
 ## 本次验证记录
