@@ -41,6 +41,28 @@ Go 测试在独立子进程与临时目录运行，只使用回环端口和本�
 
 合并上游稳定版本后重新生成代码，并优先运行多端口功能测试、配置/备份/HTTP 回归和桌面 Core 测试。不要在正式构建中关闭 `pubspec.yaml` 的原生 `build_assets` hooks。
 
+## CI Runner 切换
+
+`build` workflow 的 Dart、Plugins、Go core、Android unit tests、Rust 和 Desktop linux 共用仓库变量 `LINUX_CI_RUNNER`。未设置时使用 GitHub 的 `ubuntu-latest`，合并到其他仓库不会自动启用 Instabox。测试步骤、工具链版本和检查范围保持一致。
+
+在 Instabox 的目标工作区连接 GitHub 的 `Minggle` 账号，并授权 `Minggle/FlClash` 后启用：
+
+```powershell
+gh variable set LINUX_CI_RUNNER --repo Minggle/FlClash --body instabox-medium
+```
+
+`instabox-medium` 是 Ubuntu 24.04、4 vCPU / 8 GiB 的临时机器，支持免费计划；每个 job 结束后自动删除。Windows、macOS 原生构建仍使用 GitHub 对应平台的 runner；Instabox 无法解决 macOS 构建机容量不足。实际耗时取决于排队、缓存和工作区额度，应比较完整 CI 耗时后再判断是否加速。
+
+首次启用后同时查看 `gh run view <run-id> --repo Minggle/FlClash` 和 `instabox ci`。若 GitHub 排队而 Instabox 没有对应 job，检查 App 对此仓库的访问授权；若 Instabox 显示拒绝或等待，按其中的原因处理。回退命令只影响之后调度的任务：
+
+```powershell
+gh variable delete LINUX_CI_RUNNER --repo Minggle/FlClash
+```
+
+已排队的任务需要取消后重新运行才会使用回退后的 runner。原有上游发布 job 和独立的 Windows 发布 workflow 不受这个变量控制。
+
+参考：[Instabox CI 官方文档](https://instabox.sh/docs/ci.md)。
+
 ## 本次验证记录
 
 基线 `be847366`（v0.9.3），Windows x64，Flutter 3.47.6 / Dart 3.13.5 / Go 1.27.3。

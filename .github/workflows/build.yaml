@@ -26,7 +26,7 @@ jobs:
     # A private copy pays for its Actions minutes, so it runs the checks only when
     # started by hand.
     if: &checks github.event_name == 'workflow_dispatch' || !github.event.repository.private
-    runs-on: ubuntu-latest
+    runs-on: &linux_runner ${{ vars.LINUX_CI_RUNNER || 'ubuntu-latest' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -77,7 +77,7 @@ jobs:
   plugins:
     name: Plugins
     if: *checks
-    runs-on: ubuntu-latest
+    runs-on: *linux_runner
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -110,7 +110,7 @@ jobs:
       matrix:
         include:
           - platform: linux
-            os: ubuntu-latest
+            os: *linux_runner
           - platform: windows
             os: windows-2022
           - platform: macos
@@ -172,7 +172,7 @@ jobs:
   go:
     name: Go core
     if: *checks
-    runs-on: ubuntu-latest
+    runs-on: *linux_runner
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -215,7 +215,7 @@ jobs:
   android:
     name: Android unit tests
     if: *checks
-    runs-on: ubuntu-latest
+    runs-on: *linux_runner
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -281,7 +281,7 @@ jobs:
   rust:
     name: Rust
     if: *checks
-    runs-on: ubuntu-latest
+    runs-on: *linux_runner
     steps:
       - name: Checkout
         uses: actions/checkout@v4
