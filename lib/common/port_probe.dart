@@ -20,7 +20,9 @@ Map<int, int> parseWindowsPortOwners(String output) {
   final owners = <int, int>{};
   for (final line in output.split('\n')) {
     final fields = line.trim().split(RegExp(r'\s+'));
-    if (fields.length != 5 || fields.first != 'TCP' || fields[2] != '0.0.0.0:0') {
+    if (fields.length != 5 ||
+        fields.first != 'TCP' ||
+        fields[2] != '0.0.0.0:0') {
       continue;
     }
     final local = fields[1];
